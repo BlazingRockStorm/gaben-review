@@ -12,6 +12,10 @@ body {
   color: #333 !important;
 }
 
+.uk-card-default .fa, .uk-card-default span {
+  color: #333 !important;
+}
+
 .games_index_image {
   width: 300px;
 }
