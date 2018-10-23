@@ -12,11 +12,6 @@
           <li style="padding-left: 0; margin-right: 17px;">
             <span class="wthreeratingaits" style="margin-bottom: 0; font-size: 1.2rem;">
               <%= render "shared/star", score: review.score %>
-              <% if review.user == current_user %>
-                <% if review.user == current_user && !@new_reply.nil? %>
-                  <%= link_to "Edit", edit_review_path(review), remote: true, style: "margin-left: 2px;" %>
-                <% end %>
-              <% end %>
             </span>
           </li>
           <li style="padding-left: 0;">
