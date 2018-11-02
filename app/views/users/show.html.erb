@@ -12,11 +12,12 @@
         <%= form_for @user, html: {id: "upload_avatar_form"} do |f| %>
           <%= f.file_field :picture, id: "upload_avatar" %>
         <% end %>
-
       </div></hr><br>
 
       <div class="panel panel-default">
-        <div class="panel-heading"><%= link_to t(".edit"), edit_user_path(current_user) %> <i class="fa fa-link fa-1x"></i></div>
+        <%if logged_in? %>
+          <div class="panel-heading"><%= link_to t(".edit"), edit_user_path(current_user) %> <i class="fa fa-link fa-1x"></i></div>
+        <% end %>
       </div>
     </div><!--/col-3-->
     <div class="col-sm-9">
